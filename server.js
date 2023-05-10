@@ -2,6 +2,20 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+// Always require and configure near the top
+require('dotenv').config();
+// Connect to the database
+require('./config/database');
+
+// Require the Mongoose models
+// const User = require('./models/user');
+// const Item = require('./models/item');
+// const Category = require('./models/category');
+// const Order = require('./models/order');
+
+// Local variables will come in handy for holding retrieved documents
+let user, item, category, order;
+let users, items, categories, orders;
 
 const app = express();
 
