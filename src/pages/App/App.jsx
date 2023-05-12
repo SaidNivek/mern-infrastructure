@@ -4,10 +4,10 @@ import { Routes, Route } from 'react-router-dom';
 import NewOrderPage from '../NewOrder/NewOrderPage';
 import AuthPage from '../Auth/AuthPage';
 import OrderHistoryPage from '../OrderHistory/OrderHistoryPage';
-import NavBar from '../../components/NavBar';
+import NavBar from '../../components/NavBar/NavBar';
 
 function App() {
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState(null)
   
   return (
     <main className="App">
